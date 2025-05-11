@@ -1,0 +1,81 @@
+.user-delete {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, $color-primary, $color-secondary);
+  font-family: $font-base;
+  color: $color-text;
+
+  &__header {
+    background: $color-bg-footer-header;
+    color: white;
+    text-align: center;
+    padding: $spacer-lg;
+    font-family: $font-heading;
+    font-size: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  &__container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $spacer-lg;
+  }
+
+  &__box {
+    background: white;
+    padding: $spacer-lg;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    max-width: 500px;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 1.1rem;
+    margin-bottom: $spacer;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: $spacer;
+    flex-wrap: wrap;
+  }
+
+  &__btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    color: white;
+
+    &--cancel {
+      background-color: gray;
+
+      &:hover {
+        background-color: darken(gray, 10%);
+      }
+    }
+
+    &--confirm {
+      background-color: red;
+
+      &:hover {
+        background-color: darken(red, 10%);
+      }
+    }
+  }
+
+  &__footer {
+    background: $color-bg-footer-header;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  }
+}

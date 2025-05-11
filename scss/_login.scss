@@ -1,0 +1,132 @@
+.login {
+  @include flex-center(column);
+  min-height: 100vh;
+  background: $color-bg-footer-header;
+  color: white;
+  font-family: $font-base;
+
+input {
+  padding: $spacer / 1.5;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  background-clip: padding-box;
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 1;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: $color-bg-footer-header;
+    background-origin: border-box;
+  }
+
+
+  &:focus {
+    outline: none;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: $color-bg-footer-header;
+  }
+}
+  &__container {
+    background: white;
+    color: $color-text;
+    padding: $spacer-lg;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    gap: $spacer;
+    margin-bottom: $spacer;
+
+    .login__social {
+      background: white;
+      border-radius: 0.75rem;
+      padding: $spacer / 1.5 $spacer;
+      display: flex;
+      align-items: center;
+      gap: $spacer / 2;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+
+      span {
+        font-weight: bold;
+        color: $color-text;
+      }
+
+      &:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  &__title {
+    font-family: $font-heading;
+    font-size: 2rem;
+    margin-bottom: $spacer;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: $spacer;
+
+    label {
+      font-weight: bold;
+      text-align: left;
+    }
+
+    input {
+      padding: $spacer / 1.5;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+    }
+  }
+
+  &__btn {
+    margin-top: $spacer;
+    padding: $spacer / 1.5;
+    background-color: $color-primary;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($color-primary, 10%);
+    }
+  }
+
+  &__register {
+    margin-top: $spacer;
+    font-size: 0.9rem;
+
+    a {
+      color: $color-primary;
+      text-decoration: underline;
+
+      &:hover {
+        color: darken($color-primary, 15%);
+      }
+    }
+  }
+}

@@ -1,54 +1,41 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Увійти • Сервіс переказу коштів</title>
-  <link rel="stylesheet" href="../css/main.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вхід | User Wallet</title>
+  <link rel="stylesheet" href="/user-wallet-site/css/main.css">
 </head>
-<body>
-  <header>
-    <h1>Сервіс переказу коштів</h1>
-  </header>
+<body class="login">
 
-  <main>
-    <section class="login-container">
-      <h2>Увійдіть у свій аккаунт</h2>
-      <form action="#" method="post" class="login-form">
-        <!-- Логін -->
-        <div class="form-group">
-          <label for="username">Логін</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            placeholder="Введіть ваш логін"
-            required
-          />
-        </div>
+  <div class="login__container">
+    
+    <!-- Соціальний вхід -->
+    <div class="login__socials">
+      <div class="login__social" title="Увійти через Google">
+        <img src="/user-wallet-site/assets/images/login/google-icon.png" alt="Google" >
+        <span>Google</span>
+      </div>
+      <div class="login__social" title="Увійти через LinkedIn">
+        <img src="/user-wallet-site/assets/images/login/linkedin-icon.png" alt="LinkedIn">
+        <span>LinkedIn</span>
+      </div>
+    </div>
 
-        <!-- Пароль -->
-        <div class="form-group">
-          <label for="password">Пароль</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Введіть пароль"
-            required
-          />
-        </div>
+    <h1 class="login__title">Вхід до гаманця</h1>
 
-        <!-- Кнопка надсилання -->
-        <div class="form-group">
-          <button type="submit" class="btn">Увійти</button>
-        </div>
-      </form>
-    </section>
-  </main>
+    <form action="wallet.html" method="post" class="login__form">
+      <label for="email">Електронна пошта</label>
+      <input type="email" id="email" name="email" required>
 
-  <footer>
-    <p>&copy; 2025 Сервіс переказу коштів</p>
-  </footer>
+      <label for="password">Пароль</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit" class="login__btn">Увійти</button>
+    </form>
+
+    <p class="login__register">Ще не маєте акаунту? <a href="user-create.html">Зареєструватися</a></p>
+  </div>
+
 </body>
 </html>

@@ -1,0 +1,124 @@
+.confirm-transfer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: $color-bg-footer-header;
+  font-family: $font-base;
+
+  &__header {
+    background: $color-bg-footer-header;
+    padding: $spacer-lg;
+    color: white;
+    font-size: 2rem;
+    font-family: $font-heading;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  &__container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $spacer-lg;
+  }
+
+  &__summary,
+  &__form {
+    background: white;
+    padding: $spacer-lg;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    max-width: 500px;
+    width: 100%;
+    color: $color-text;
+    margin-bottom: $spacer;
+  }
+
+  &__summary {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      line-height: 1.6rem;
+
+      li {
+        font-size: 1rem;
+
+        strong {
+          color: $color-primary;
+          margin-right: 0.25rem;
+        }
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: $spacer;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+    }
+
+    input {
+      padding: $spacer / 1.5;
+      border-radius: 0.5rem;
+      background-color: #f9f9f9;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+
+      &:hover,
+      &:focus {
+        border-image: linear-gradient(to right, $color-primary, $color-secondary) 1;
+        outline: none;
+        background-color: white;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 0.75rem;
+    background-color: $color-primary;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($color-primary, 10%);
+    }
+  }
+
+  &__back-btn {
+    font-size: 0.9rem;
+    text-decoration: underline;
+    color: $color-primary;
+    margin-top: 0.5rem;
+
+    &:hover {
+      color: darken($color-primary, 10%);
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    padding: 1rem;
+    background: $color-bg-footer-header;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  }
+}

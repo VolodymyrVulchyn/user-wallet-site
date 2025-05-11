@@ -1,0 +1,233 @@
+.wallet {
+  @include flex-center(column);
+  min-height: 100vh;
+  background: $color-bg-light;
+  font-family: $font-base;
+  color: $color-text;
+
+  &__header {
+    width: 100%;
+    background: $color-bg-footer-header;
+    padding: $spacer-lg;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  &__topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__branding {
+    flex: 1;
+    text-align: center;
+
+    .wallet__title {
+      font-family: $font-heading;
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .wallet__greeting {
+      font-size: 1rem;
+      margin-top: 0.25rem;
+    }
+  }
+
+  &__menu {
+    position: relative;
+
+    &-toggle {
+      background-color: white;
+      color: $color-primary;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      margin-right: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        background-color: $color-bg-light;
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    &-list {
+      position: absolute;
+      right: 0;
+      top: 1.7rem;
+      background: white;
+      color: $color-text;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      list-style: none;
+      padding: 0.5rem 0;
+      min-width: 200px;
+      z-index: 10;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+
+      li {
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 0.5rem;
+        }
+
+        &:hover {
+          background-color: $color-bg-light;
+        }
+
+        a {
+          color: $color-text;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+
+    &:hover &-list {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+
+  &__main {
+    width: 100%;
+    max-width: 800px;
+    padding: $spacer-lg;
+    display: flex;
+    flex-direction: column;
+    gap: $spacer-lg;
+  }
+
+  &__summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: $spacer;
+
+    .wallet__card {
+      background: white;
+      padding: $spacer;
+      border-radius: 0.75rem;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    .wallet__label {
+      font-size: 0.9rem;
+      color: gray;
+    }
+
+    .wallet__amount {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $color-primary;
+      word-break: break-word;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacer;
+
+    .wallet__btn {
+      flex: 1;
+      padding: $spacer;
+      background-color: $color-primary;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      &:hover {
+        background-color: darken($color-primary, 10%);
+      }
+    }
+  }
+
+  &__transactions {
+    background: white;
+    padding: $spacer;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      margin-bottom: $spacer / 2;
+      font-size: 1.3rem;
+    }
+
+    .wallet__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: $spacer / 1.5;
+    }
+
+    .wallet__item {
+      display: flex;
+      justify-content: space-between;
+      padding: $spacer / 1.2;
+      background: #f9f9f9;
+      border-radius: 0.5rem;
+
+      span {
+        font-size: 0.9rem;
+        color: gray;
+      }
+
+      strong {
+        font-weight: 600;
+      }
+    }
+
+    .wallet__status {
+      font-weight: bold;
+
+      &--success { color: green; }
+      &--done { color: #555; }
+      &--pending { color: orange; }
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    padding: 1rem;
+    width: 100%;
+    background: $color-bg-footer-header;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  }
+}

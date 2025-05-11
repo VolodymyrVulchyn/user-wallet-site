@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Редагування профілю | User Wallet</title>
+  <link rel="stylesheet" href="/user-wallet-site/css/main.css">
+</head>
+<body class="user-edit">
+
+  <header class="user-edit__header">
+    Редагування профілю
+  </header>
+
+  <main class="user-edit__container">
+    <form class="user-edit__form">
+      <div class="user-edit__avatar">
+        <label for="avatar">
+          <img src="/user-wallet-site/assets/images/user-info/avatar.png" alt="Аватар">
+          <input type="file" id="avatar" accept="image/*">
+        </label>
+      </div>
+
+      <div class="user-edit__field">
+        <label for="name">Ім’я</label>
+        <input type="text" id="name" value="Володимир Вульчин">
+      </div>
+
+      <div class="user-edit__field">
+        <label for="email">Email</label>
+        <input type="email" id="email" value="volodymyr@vulchyn.com">
+      </div>
+
+      <div class="user-edit__field">
+        <label for="phone">Телефон</label>
+        <input type="tel" id="phone" value="+38 (098) 123-45-67">
+      </div>
+
+      <div class="user-edit__field">
+        <label for="iban">IBAN</label>
+        <input type="text" id="iban" value="UA123456789000000123456789">
+      </div>
+
+      <a href="wallet.html" class="user-edit__back-btn">← Назад</a>
+      <button type="submit" class="user-edit__btn">Зберегти зміни</button>
+      <a href="user-delete.html" class="user-edit__btn user-edit__btn--delete">Видалити акаунт</a>
+    </form>
+  </main>
+
+  <footer class="user-edit__footer">
+    &copy; 2025 User Wallet. Усі права захищено.
+  </footer>
+
+</body>
+</html>

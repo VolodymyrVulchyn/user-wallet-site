@@ -1,0 +1,22 @@
+// Кольори
+$color-primary:   #0057b8;
+$color-secondary: #ffd700;
+$color-bg-light:  #f4f4f4;
+$color-text:      #222;
+$color-bg-footer-header: linear-gradient(135deg, $color-primary, $color-secondary);
+
+// Відступи
+$spacer: 1rem;
+$spacer-lg: 2rem;
+
+// Шрифти
+$font-base: "Open Sans", sans-serif;
+$font-heading: "Montserrat", sans-serif;
+
+// Брейкпоінти
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
