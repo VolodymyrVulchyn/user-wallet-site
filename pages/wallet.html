@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гаманець | User Wallet</title>
+  <link rel="stylesheet" href="/user-wallet-site/css/main.css">
+</head>
+<body class="wallet">
+
+  <!-- HEADER -->
+  <header class="wallet__header">
+    <div class="wallet__topbar">
+      <div class="wallet__branding">
+        <h1 class="wallet__title">User Wallet</h1>
+        <p class="wallet__greeting">Вітаємо, <strong>Володимир</strong></p>
+      </div>
+
+      <div class="wallet__menu">
+        <button class="wallet__menu-toggle">Опції</button>
+        <ul class="wallet__menu-list">
+          <li><a href="user-info.html">
+            <img src="/user-wallet-site/assets/images/wallet/profile.png"" alt="Профіль"> Профіль</a></li>
+          <li><a href="user-edit.html">
+            <img src="/user-wallet-site/assets/images/wallet/edit.png" alt="Редагувати"> Редагувати</a></li>
+          <li><a href="users.html">
+            <img src="/user-wallet-site/assets/images/wallet/users.png" alt="Інші користувачі"> Інші користувачі</a></li>
+          <li><a href="logout.html">
+            <img src="/user-wallet-site/assets/images/wallet/logout.png" alt="Вийти"> Вийти</a></li>
+          <li><a href="history.html">
+            <img src="/user-wallet-site/assets/images/wallet/history.png" alt="Історія"> Історія транзакцій</a></li>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="wallet__main">
+
+    <section class="wallet__summary">
+      <div class="wallet__card">
+        <p class="wallet__label">Поточний баланс</p>
+        <p class="wallet__amount">₴12,500.00</p>
+      </div>
+      <div class="wallet__card">
+        <p class="wallet__label">Валюта</p>
+        <p class="wallet__amount">UAH</p>
+      </div>
+      <div class="wallet__card">
+        <p class="wallet__label">IBAN</p>
+        <p class="wallet__amount">UA123456789000000123456789</p>
+      </div>
+    </section>
+
+    <section class="wallet__actions">
+      <a
+        href="https://www.google.com/maps/search/найближчий+термінал+поповнення+картки"
+        target="_blank"
+        class="wallet__btn"
+      >
+        <img src="/user-wallet-site/assets/images/wallet/atm.png" alt="Термінал"> Найближчий термінал
+      </a>
+      <a href="transfer.html" class="wallet__btn">
+        <img src="/user-wallet-site/assets/images/wallet/transfer.png" alt="Переказати"> Переказати
+      </a>
+    </section>
+
+    <section class="wallet__transactions">
+      <h2>Останні транзакції</h2>
+      <ul class="wallet__list">
+        <li class="wallet__item">
+          <div>
+            <strong>+₴1,000.00</strong><br>
+            <span>Поповнення • 2025-05-10</span>
+          </div>
+          <span class="wallet__status wallet__status--success">Успішно</span>
+        </li>
+        <li class="wallet__item">
+          <div>
+            <strong>-₴250.00</strong><br>
+            <span>Оплата Netflix • 2025-05-08</span>
+          </div>
+          <span class="wallet__status wallet__status--done">Завершено</span>
+        </li>
+        <li class="wallet__item">
+          <div>
+            <strong>-₴300.00</strong><br>
+            <span>Переказ другу • 2025-05-06</span>
+          </div>
+          <span class="wallet__status wallet__status--pending">Очікує</span>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="wallet__footer">
+    <p>&copy; 2025 User Wallet. Усі права захищено.</p>
+  </footer>
+
+</body>
+</html>

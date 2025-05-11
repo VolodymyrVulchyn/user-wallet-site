@@ -1,0 +1,97 @@
+.register {
+  @include flex-center(column);
+  min-height: 100vh;
+  background: linear-gradient(135deg, $color-primary, $color-secondary);
+  color: white;
+  font-family: $font-base;
+
+  &__container {
+    background: white;
+    color: $color-text;
+    padding: $spacer-lg;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: $font-heading;
+    font-size: 2rem;
+    margin-bottom: $spacer;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: $spacer;
+
+    label {
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+
+  &__input-wrapper {
+    padding: 2px;
+    border-radius: 0.5rem;
+    background: linear-gradient(90deg, $color-primary, $color-primary);
+    background-size: 200% 200%;
+    transition: background-position 0.5s ease;
+
+    &:hover,
+    &:focus-within {
+      background: linear-gradient(90deg, $color-primary, $color-secondary);
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+
+    input {
+      width: 100%;
+      padding: $spacer / 1.5;
+      border: none;
+      border-radius: 0.5rem;
+      outline: none;
+      background-color: white;
+      font-family: $font-base;
+      font-size: 1rem;
+      box-sizing: border-box;
+      transition: box-shadow 0.3s ease;
+
+      &:focus {
+        box-shadow: 0 0 6px rgba($color-primary, 0.3);
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: $spacer;
+    padding: $spacer / 1.5;
+    background-color: $color-primary;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($color-primary, 10%);
+    }
+  }
+
+  &__login {
+    margin-top: $spacer;
+    font-size: 0.9rem;
+
+    a {
+      color: $color-primary;
+      text-decoration: underline;
+
+      &:hover {
+        color: darken($color-primary, 15%);
+      }
+    }
+  }
+}

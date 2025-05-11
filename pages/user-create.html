@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Реєстрація | User Wallet</title>
+  <link rel="stylesheet" href="/user-wallet-site/css/main.css">
+</head>
+<body class="register">
+
+  <div class="register__container">
+
+    <h1 class="register__title">Створіть акаунт</h1>
+
+    <form action="wallet.html" method="post" class="register__form">
+
+      <label for="name">Ім’я</label>
+      <div class="register__input-wrapper">
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <label for="email">Електронна пошта</label>
+      <div class="register__input-wrapper">
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <label for="password">Пароль</label>
+      <div class="register__input-wrapper">
+        <input type="password" id="password" name="password" required>
+      </div>
+
+      <label for="confirm">Підтвердьте пароль</label>
+      <div class="register__input-wrapper">
+        <input type="password" id="confirm" name="confirm" required>
+      </div>
+
+      <button type="submit" class="register__btn">Зареєструватися</button>
+    </form>
+
+    <p class="register__login">Вже маєте акаунт? <a href="login.html">Увійти</a></p>
+  </div>
+
+</body>
+</html>

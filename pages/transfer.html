@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Переказ коштів</title>
+  <link rel="stylesheet" href="/user-wallet-site/css/main.css">
+</head>
+<body class="transfer">
+  <header class="transfer__header">Переказ коштів</header>
+
+  <main class="transfer__container">
+    <h2 class="transfer__subtitle">Переказ за IBAN</h2>
+    <form class="transfer__form" action="confirm-transfer.html" method="get">
+      <div class="transfer__field">
+        <label for="iban">IBAN одержувача</label>
+        <input type="text" id="iban" name="iban" placeholder="UA123..." required />
+      </div>
+      <div class="transfer__field">
+        <label for="name">Ім’я одержувача</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="transfer__field">
+        <label for="amount">Сума (UAH)</label>
+        <input type="number" id="amount" name="amount" min="1" max="12500" required />
+      </div>
+      <div class="transfer__field">
+        <label for="note">Призначення платежу</label>
+        <input type="text" id="note" name="note" />
+      </div>
+      <a href="wallet.html" class="transfer__back-btn">← Назад до гаманця</a>
+      <button type="submit" class="transfer__btn">Переказати</button>
+    </form>
+  </main>
+
+  <footer class="transfer__footer">
+    &copy; 2025 User Wallet. Усі права захищено.
+  </footer>
+</body>
+</html>

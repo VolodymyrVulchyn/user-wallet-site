@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Історія транзакцій | User Wallet</title>
+  <link rel="stylesheet" href="/user-wallet-site/css/main.css" />
+</head>
+<body class="history">
+
+  <header class="history__header">
+    <h1>Історія транзакцій</h1>
+  </header>
+
+  <main class="history__container">
+
+    <div class="history__filters">
+      <label for="type">Тип:</label>
+      <select id="type" name="type">
+        <option>Усі</option>
+        <option>Надходження</option>
+        <option>Витрати</option>
+      </select>
+
+      <label for="period">Період:</label>
+      <select id="period" name="period">
+        <option>Останні 30 днів</option>
+        <option>Останні 3 місяці</option>
+        <option>Усі</option>
+      </select>
+    </div>
+
+    <ul class="history__list">
+
+      <!-- Транзакція 1 -->
+      <li class="history__item">
+        <img src="/user-wallet-site/assets/images/history/woman.png" alt="Receive" class="history__icon" />
+        <div class="history__info">
+          <h3>Переказ від Олени</h3>
+          <p>Категорія: Переказ • 10.05.2025, 14:32</p>
+        </div>
+        <div class="history__amount history__amount--in">+₴3,200.00</div>
+      </li>
+
+      <!-- Транзакція 2 -->
+      <li class="history__item">
+        <img src="/user-wallet-site/assets/images/history/rozetka.png" alt="Card Payment" class="history__icon" />
+        <div class="history__info">
+          <h3>Купівля в Rozetka</h3>
+          <p>Категорія: Покупки • 08.05.2025, 18:45</p>
+        </div>
+        <div class="history__amount history__amount--out">-₴1,299.00</div>
+      </li>
+
+      <!-- Транзакція 3 -->
+      <li class="history__item">
+        <img src="/user-wallet-site/assets/images/history/lkp.png" alt="Utilities" class="history__icon" />
+        <div class="history__info">
+          <h3>Комунальні послуги</h3>
+          <p>Категорія: Послуги • 07.05.2025, 10:10</p>
+        </div>
+        <div class="history__amount history__amount--out">-₴850.00</div>
+      </li>
+
+      <!-- Транзакція 4 -->
+      <li class="history__item">
+        <img src="/user-wallet-site/assets/images/history/payment.png" alt="Salary" class="history__icon" />
+        <div class="history__info">
+          <h3>Зарплата</h3>
+          <p>Категорія: Доходи • 01.05.2025, 09:00</p>
+        </div>
+        <div class="history__amount history__amount--in">+₴18,000.00</div>
+      </li>
+      <a href="wallet.html" class="success-transfer__btn">← Повернутись до гаманця</a>
+    </ul>
+
+  </main>
+
+  <footer class="history__footer">
+    &copy; 2025 User Wallet. Усі права захищено.
+  </footer>
+
+</body>
+</html>

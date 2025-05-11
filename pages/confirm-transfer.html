@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Підтвердження переказу</title>
+  <link rel="stylesheet" href="/user-wallet-site/css/main.css" />
+</head>
+<body class="confirm-transfer">
+  <header class="confirm-transfer__header">Підтвердження переказу</header>
+
+  <main class="confirm-transfer__container">
+    <section class="confirm-transfer__summary">
+      <h2 class="confirm-transfer__subtitle">Деталі переказу</h2>
+      <ul>
+        <li><strong>Отримувач:</strong> Володимир Вульчин</li>
+        <li><strong>IBAN/Картка:</strong> UA123456789012345678901234567</li>
+        <li><strong>Сума:</strong> 5000 UAH</li>
+        <li><strong>Призначення:</strong> Оплата послуг</li>
+      </ul>
+    </section>
+
+    <form class="confirm-transfer__form" action="success-transfer.html" method="get">
+      <div class="confirm-transfer__field">
+        <label for="code">Підтверджувальний код (6 цифр)</label>
+        <input type="text" id="code" name="code" maxlength="6" required />
+      </div>
+      <button type="submit" class="confirm-transfer__btn">Підтвердити</button>
+      <a href="transfer.html" class="confirm-transfer__back-btn">← Назад до переказу</a>
+    </form>
+
+  </main>
+
+  <footer class="confirm-transfer__footer">
+    &copy; 2025 User Wallet. Усі права захищено.
+  </footer>
+</body>
+</html>
